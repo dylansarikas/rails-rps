@@ -45,7 +45,7 @@ class MovesController < ApplicationController
       @output = "lost"
     end
 
-    render({:template => "game_templates/scissor_moves"})
+    render({:template => "game_templates/scissors_moves"})
   end
 
 end

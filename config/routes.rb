@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
   get "/paper" => "moves#paper"
   get "/rock" => "moves#rock"
-  get "/scissor" => "moves#scissors"
+  get "/scissors" => "moves#scissors"
   
 
 end
