@@ -1,6 +1,18 @@
 class MovesController < ApplicationController
 
   def paper
+    moves = ["rock", "paper", "scissors"]
+
+    @computer = moves.sample
+  
+    if @computer == "paper"
+      @output = "tied"
+    elsif @computer == "scissors"
+      @output = "lost"
+    else
+      @output = "won"
+    end
+
     render({:template => "game_templates/paper_moves"})
   end
 
@@ -16,7 +28,7 @@ class MovesController < ApplicationController
     else
       @output = "tied"
     end
-    
+
     render({:template => "game_templates/rock_moves"})
   end
 
